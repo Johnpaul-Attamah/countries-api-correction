@@ -23,6 +23,12 @@ body{
     color: var(--Very-Dark-Blue);
 }
 
+button {
+    display: block;
+    border: none;
+    outline: none;
+}
+
 .darkMode {
     background-color: var(--bg-color-dark);
     color: var(--Very-Light-Gray);
@@ -33,11 +39,12 @@ body{
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    z-index: 10;
     width: 100%;
     height: 4rem;
-    /* background-color: var(--Very-Light-Gray); */
-    /* background-color: rgb(0, 0, 0); */
     font-family: nunito;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     box-shadow: 1px 1px 4px rgba(0, 0,0, 0.5); 
 }
 .title{
@@ -194,13 +201,18 @@ input::placeholder {
     align-content: center;
 }
 
-.country {
+.country-container {
+    display: block;
     width: calc(25% - 6rem);
     margin: 3rem;
     border: 1px solid #555;
     border-radius: 8px;
-    box-shadow: 1px 1px 4px rgba(0, 0,0, 0.5);;
+    box-shadow: 1px 1px 4px rgba(0, 0,0, 0.5);
+}
 
+.country {
+    width: 100%;
+    height: 100%;
 }
 
 .country-flag {
@@ -245,30 +257,56 @@ input::placeholder {
 }
 
 
+@media screen and (max-width: 900px){
+    .country {
+        width: calc(calc(100% / 3) - 6rem);
+        margin: 3rem;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .country {
+        width: calc(50% - 6rem);
+        margin: 3rem;
+    }
+}
+
 @media screen and (max-width: 500px){
 
-.search-container {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-  
- .search-box{
-    margin-left: 0;
-    width: 90%;
-} 
+    .header-section .title {
+        margin-left: 1rem;
+    }
 
-.region-container{
-    margin-right: 0;
-    margin-left: 2rem;
-    margin-top: 5rem;
-    align-self: flex-start;    
-}
+    .dark {
+        margin-right: 1rem;
+    }
 
-.country {
-    width: calc(100% - 6rem);
-    margin: 3rem;
-}
+    .toggle-icon .text {
+        display: none;
+    }
+
+    .search-container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .search-box{
+        margin-left: 0;
+        width: 90%;
+    } 
+
+    .region-container{
+        margin-right: 0;
+        margin-left: 2rem;
+        margin-top: 5rem;
+        align-self: flex-start;    
+    }
+
+    .country {
+        width: calc(100% - 6rem);
+        margin: 3rem;
+    }
 
 
 }

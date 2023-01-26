@@ -12,7 +12,7 @@
 // if( e.target.Matches(".moon-icon") || e.target.parentElement.Matches(".moon-icon")){
 // document.body.classList.add("darkmode");
 // darkModeContainer.innerHTML ;`
-// <span class="moon-icon toggle-box"><i class="fa fa-moon-o"></i>dark mode </span>
+// <span class="moon-icon toggle-box"><i class="fa fa-moon-o"></i><span class="text">dark mode</span> </span>
 // `
 // }else{
 
@@ -30,12 +30,12 @@ const toggleLightMenu = document.querySelector(".darkMode");
     if (e.target.matches(".sun") || e.target.parentElement.matches(".sun")) {
         document.body.classList.add("darkMode")
         darkModeContainer.innerHTML = `
-        <span class="moon toggle-icon"><i class="fa fa-moon-o"></i>dark mode </span>
+        <span class="moon toggle-icon"><i class="fa fa-moon-o"></i><span class="text">dark mode</span> </span>
         `
     }else {
         document.body.classList.remove("darkMode")
         darkModeContainer.innerHTML = `
-        <span class="sun toggle-icon"><i class="fa fa-sun-o"></i>light mode </span>
+        <span class="sun toggle-icon"><i class="fa fa-sun-o"></i><span class="text">light mode</span> </span>
         `
     }
 })
