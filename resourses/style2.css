@@ -12,6 +12,7 @@
     margin-top: 5rem;
     padding: 1rem 5rem 5rem;
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -86,4 +87,6 @@
     background-color: #c0c0c0;
     font-size: 1.2rem;
     text-transform: capitalize;
+    text-decoration: none;
+    color: inherit;
 }

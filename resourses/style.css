@@ -208,6 +208,8 @@ input::placeholder {
     border: 1px solid #555;
     border-radius: 8px;
     box-shadow: 1px 1px 4px rgba(0, 0,0, 0.5);
+    text-decoration: none;
+    color: inherit;
 }
 
 .country {
